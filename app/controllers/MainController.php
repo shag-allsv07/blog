@@ -3,21 +3,20 @@
 
 namespace app\controllers;
 
+use system\core\Controller;
 
-class MainController
+class MainController extends Controller
 {
-    public function __construct()
+
+    public function indexAction()
     {
-        echo 'MainController';
+        pr($this->route);
     }
 
-    public function index()
+    public function testAction()
     {
-        echo 'MainController::index';
+        pr($this->route);
     }
 
-    public function test()
-    {
-        echo 'MainController::test';
-    }
+
 }

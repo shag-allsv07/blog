@@ -28,6 +28,8 @@ class Router
      */
     public static function checkRoute($url)
     {
+        $url = self::removeQueryString($url); // убираем явные GET параметры
+
         foreach (self::$routers as $key => $val){
             if (preg_match("#$key#i", $url, $matches)) { // если есть совпадение с регулярным выражением, то записываем в $rout = текущее значение таблицы маршрутов routers, а так-же записываем текущий маршрут в массив matches
                 $rout = $val;
@@ -43,6 +45,7 @@ class Router
                if(!isset($rout['action'])){ // если в адресной строке пришел только контроллер (http://blog/news), то дописываем в rout метод index
                    $rout['action'] = 'index';
                }
+
                 self::$route = $rout; // записываем в свойство текущий маршрут
 
                return true;
@@ -63,9 +66,9 @@ class Router
             $controller = 'app\controllers\\' . self::$route['controller'] . "Controller";
 
             if (class_exists($controller)){
-                $obj = new $controller; // создаем обьект класса
-                $action = self::lowerStr(self::$route['action']); // привели в правильное название метод
-
+                $obj = new $controller(self::$route); // создаем обьект класса
+                $action = self::lowerStr(self::$route['action']) . 'Action'; // привели в правильное название метод
+                //pr(self::$route);
                 if (method_exists($obj, $action)){
                     $obj->$action(); // вызываем метод класса
                 }
@@ -78,8 +81,30 @@ class Router
             }
         }
         else {
-            echo '404';
+            http_response_code(404);
+            include '404.html';
         }
+    }
+
+    /**
+     * метод отсекает явные GET параментры -> ?Page=1. неявыные GET параметры Main/test....
+     * @param $url
+     * @return mixed
+     */
+    private static function removeQueryString($url)
+    {
+        if ($url != ''){
+            $params = explode('&', $url);
+
+            if (strpos($params[0], '=') === false){
+                return $params[0];
+            }
+            else {
+                return '';
+            }
+        }
+
+        return $url;
     }
 
     private static function upperStr($str)

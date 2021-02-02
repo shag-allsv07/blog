@@ -6,17 +6,13 @@ namespace app\controllers;
 
 class PageController
 {
-    public function __construct()
-    {
-        echo 'PageController';
-    }
 
-    public function index()
+    public function indexAction()
     {
         echo 'PageController::index';
     }
 
-    public function test()
+    public function testAction()
     {
         echo 'PageController::test';
     }
