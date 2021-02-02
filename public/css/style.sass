@@ -1,0 +1,736 @@
+* 
+    box-sizing: border-box
+
+$font-roboto: 'Roboto', sans-serif
+$font-rubik: 'Rubik', sans-serif
+$font-coda: 'Coda Caption', sans-serif
+
+.blog_container 
+    /*background-color: black; */
+    background: #171717 url(../images/bg.jpg) repeat top center
+
+
+.header
+    background-color: #0e1417
+    height: 60px
+    display: flex
+    align-items: center
+    position: fixed
+    width: 100%
+    margin-top: -60px
+    z-index: 10
+    .logo
+        h1
+            font-size: 22px
+            font-family: $font-coda
+            color: #fff
+
+    .main-nav
+        margin-left: 20px
+        margin-right: 20px
+        display: flex
+        justify-content: space-around
+        .item
+            padding-left: 10px
+            padding-right: 10px
+            color: #fff
+            font-size: 20px
+            font-family: $font-roboto
+            &:hover
+                cursor: pointer
+                text-decoration: none
+                color: #0593da
+    
+    .auth
+        display: flex
+        justify-content: center
+        .link_auth
+            color: #fff
+            font-size: 17px
+            span
+                margin-left: 5px
+            &:hover
+                cursor: pointer
+                text-decoration: none
+                color: #c80700
+
+.span
+    background: #1c1c1c
+    margin-top: 60px
+    span
+        color: #b1b1b1
+        font-size: 22px
+        font-family: $font-rubik
+        padding: 5px 20px
+
+.news-today
+    background: #1c1c1c
+    display: grid !important
+    grid-template-columns: repeat(8, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    grid-gap: 5px
+    height: 500px
+
+    .article-today
+        position: relative
+        overflow: hidden
+        .cat
+            padding: 5px 8px
+            position: absolute
+            background-color: #006495
+            top: -100px
+            opacity: 0
+            transition: 0.5s ease
+            span
+                font-size: 15px
+                font-family: $font-roboto
+                color: #ffffff
+                display: block
+                text-align: center
+        &:nth-child(1)
+            grid-column-start: 1
+            grid-column-end: 6
+            grid-row-start: 1
+            grid-row-end: 3
+        &:nth-child(2)
+            grid-column-start: 6
+            grid-column-end: 9
+            grid-row-start: 1
+            grid-row-end: 3
+        &:nth-child(3)
+            grid-column-start: 1
+            grid-column-end: 5
+            grid-row-start: 3
+            grid-row-end: 5
+        &:nth-child(4)
+            grid-column-start: 5
+            grid-column-end: 9
+            grid-row-start: 3
+            grid-row-end: 5
+        &:hover
+            .article-today__text
+                top: 60%
+            .cat
+                opacity: 0.7
+                top: 20px
+
+        .article-today__text
+            position: absolute
+            top: 70%
+            width: 100%
+            height: 100%
+            z-index: 10
+            background: #000000
+            opacity: 0.6
+            z-index: 1
+            transition: 0.5s ease
+            
+            .article-today__name
+                z-index: 10
+                color: #ffffff
+                margin-top: 20px
+                margin-left: 20px
+                margin-right: 20px
+                font-size: 20px
+                z-index: 5
+                text-align: center
+                display: block
+        &:hover
+            .article-img
+                
+
+        .article-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 0.5s ease 0s
+
+
+
+
+.span_light
+    padding-top: 30px
+    background: #ffffff
+    span
+        margin-left: 15px
+        margin-bottom: 15px
+        font-size: 30px
+        font-family: $font-rubik
+        font-weight: 300
+
+.game-news
+    padding-bottom: 50px
+    background: #ffffff
+    border-bottom: 1px solid #c2c2c2 
+    .beee
+        .game-new
+            padding-bottom: 15px
+            padding-top: 15px
+            padding-left: 0
+            border-bottom: 1px solid #c2c2c2 
+            &:nth-child(5)
+                border-bottom: none
+            &__img
+                width: 100%
+
+            &__name
+                margin-top: 5px
+                margin-bottom: 5px
+                padding-left: 20px
+                a
+                    color: #434343
+                    font-family: $font-rubik
+                    font-size: 18px
+                    line-height: 1.4
+                    font-weight: 600
+                    &:hover
+                        text-decoration: none       
+                        color: #006495
+            &__info
+                padding-left: 20px
+                &--date
+                    color: #434343
+                    font-size: 13px
+                    font-family: $font-roboto
+                    font-weight: 400
+                    font-style: italic
+                &--comment
+                    margin-left: 10px
+                    color: #434343
+                    font-size: 13px
+                    font-family: $font-roboto
+                    font-weight: 400
+                    font-style: italic
+                    .fa-comment-o
+                        font-size: 14px
+                        margin-right: 5px
+                        font-weight: bold
+        .more-news
+            text-transform: uppercase
+            position: relative
+            color: #434343
+            top: 25px
+            &:hover
+                text-decoration: none
+                color: #006495
+                &::before
+                    opacity: 0
+            &::before 
+                content: ""
+                position: absolute
+                height: 2px
+                width: 100%
+                bottom: 0
+                margin-bottom: -2px
+                background: #006495
+                opacity: 1
+                transition: 0.5s ease
+
+    .popular
+        background: #1c262c
+        span
+            margin-left: 15px
+            font-size: 20px
+            font-family: $font-rubik
+            font-weight: 300
+            color: #ffffff
+        &-new
+            border-radius: 5px
+            //background: #ffffff
+            margin-top: 10px
+            margin-bottom: 10px
+            padding-top: 10px
+            padding-bottom: 10px
+            //border-bottom: 1px solid #8a8a8a 
+            &__img
+                width: 100%
+            &__desc
+                &--name
+                    a
+                        font-family: $font-roboto
+                        //color: #434343
+                        color: #ffffff
+                        font-size: 15px
+                        p
+                            line-height: 1.3
+                            margin-top: 5px
+                            margin-bottom: 0
+                        &:hover
+                            text-decoration: underline
+
+.blogs-on-games
+    padding-bottom: 100px
+    background: #ffffff
+    border-bottom: 1px solid #c2c2c2 
+    &__game
+        
+        .blog
+            position: relative
+            padding-left: 5px
+            padding-right: 5px
+            a
+                text-decoration: none
+                &:hover
+                    text-decoration: none
+            &__img
+                width: 100%
+            .eyes
+                position: absolute
+                top: 0
+                left: 5px
+                background: #006495
+                padding: 2px 8px
+                //border-radius: 0 0 8px 0
+                span
+                    font-size: 13px
+                    color: #ffffff
+                    font-family: $font-roboto
+                    .fa-eye
+                        font-size: 13px
+                        color: #ffffff
+                        margin-right: 2px
+                        
+            &-author
+                display: flex
+                justify-content: space-between
+                margin-top: 5px
+                .author
+                    margin-left: 5px
+                    span
+                        font-family: $font-roboto
+                        font-weight: 400
+                        font-style: italic
+                        font-size: 14px
+                        color: #434343
+                    a
+                        font-family: $font-roboto
+                        font-weight: 600
+                        font-size: 14px
+                        margin-left: 5px
+                        color: #006495
+                        &:hover
+                            text-decoration: underline
+                .comment
+                    margin-right: 5px
+                    span
+                        font-family: $font-roboto
+                        font-weight: 500
+                        font-style: italic
+                        font-size: 13px
+                        color: #434343
+                        .fa-comment-o
+                            font-size: 14px
+                            margin-right: 5px
+
+            &-desc
+                padding-top: 10px
+                a
+                    color: #434343
+                    font-family: $font-rubik
+                    font-size: 18px
+                    line-height: 1.4
+                    font-weight: 600
+                    &:hover
+                        color: #006495
+                        text-decoration: none
+    .more-blogs
+        text-transform: uppercase
+        position: relative
+        color: #434343
+        top: 25px
+        left: 15px
+        &:hover
+            text-decoration: none
+            color: #006495
+            &::before
+                opacity: 0
+        &::before 
+            content: ""
+            position: absolute
+            height: 2px
+            width: 100%
+            bottom: 0
+            margin-bottom: -2px
+            background: #006495
+            opacity: 1
+            transition: 0.5s ease
+
+
+.games-articles
+    padding-bottom: 100px
+    background: #ffffff
+    border-bottom: 1px solid #c2c2c2 
+    &__game
+        
+        .article
+            position: relative
+            padding-left: 5px
+            padding-right: 5px
+            a
+                text-decoration: none
+            &__img
+                width: 100%
+            &-day
+                display: flex
+                justify-content: space-between
+                margin-top: 5px
+                .day
+                    margin-left: 5px
+                    span
+                        font-family: $font-roboto
+                        font-weight: 400
+                        font-style: italic
+                        font-size: 14px
+                        color: #434343
+            &-desc
+                padding-top: 10px
+                a
+                    color: #434343
+                    font-family: $font-rubik
+                    font-size: 18px
+                    line-height: 1.4
+                    font-weight: 600
+                    &:hover
+                        color: #006495
+                        text-decoration: none
+    .more-blogs
+        text-transform: uppercase
+        position: relative
+        color: #434343
+        top: 25px
+        left: 15px
+        &:hover
+            text-decoration: none
+            color: #006495
+            &::before
+                opacity: 0
+        &::before 
+            content: ""
+            position: absolute
+            height: 2px
+            width: 100%
+            bottom: 0
+            margin-bottom: -2px
+            background: #006495
+            opacity: 1
+            transition: 0.5s ease
+
+.span_dark
+    padding-top: 30px
+    background: #1c1c1c
+    span
+        margin-left: 15px
+        margin-bottom: 15px
+        font-size: 30px
+        font-family: $font-rubik
+        font-weight: 300
+        color: #ffffff
+
+.gallery
+    background: #1c1c1c
+    padding-bottom: 100px
+    display: grid !important
+    grid-template-columns: repeat(8, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    &-item
+        position: relative
+        z-index: 1
+        &:hover
+            cursor: pointer
+            .eye
+                opacity: 0.7
+                transform: translate(-50%, -50%)
+                top: 50%
+                .fa-eye
+                    opacity: 1
+            .overlay
+                opacity: 0.5
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+        .eye
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, 0)
+            height: 40px
+            width: 40px
+            overflow: hidden
+            border-radius: 100px
+            background: #fff
+            z-index: 8
+            opacity: 0
+            transition: 0.3s ease
+
+            .fa-eye
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                color: #006495
+                font-size: 20px
+                z-index: 10
+                opacity: 0
+                transition: 0.3s ease
+        .overlay
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            background-color: #006495
+            opacity: 0
+            z-index: 5
+            transition: 0.3s ease
+                    
+        &:nth-child(1)
+            grid-column-start: 1
+            grid-column-end: 5
+            grid-row-start: 1
+            grid-row-end: 3
+        &:nth-child(2)
+            grid-column-start: 5
+            grid-column-end: 7
+            grid-row-start: 1
+            grid-row-end: 2
+        &:nth-child(3)
+            grid-column-start: 7
+            grid-column-end: 9
+            grid-row-start: 1
+            grid-row-end: 2
+        &:nth-child(4)
+            grid-column-start: 5
+            grid-column-end: 7
+            grid-row-start: 2
+            grid-row-end: 3
+        &:nth-child(5)
+            grid-column-start: 7
+            grid-column-end: 9
+            grid-row-start: 2
+            grid-row-end: 3
+        &:nth-child(6)
+            grid-column-start: 1
+            grid-column-end: 3
+            grid-row-start: 3
+            grid-row-end: 4
+        &:nth-child(7)
+            grid-column-start: 3
+            grid-column-end: 5
+            grid-row-start: 3
+            grid-row-end: 4
+        &:nth-child(8)
+            grid-column-start: 5
+            grid-column-end: 7
+            grid-row-start: 3
+            grid-row-end: 4
+        &:nth-child(9)
+            grid-column-start: 7
+            grid-column-end: 9
+            grid-row-start: 3
+            grid-row-end: 4
+            
+    .more-gallery-item
+        text-transform: uppercase
+        position: relative
+        color: #fff
+        top: 25px
+        left: 15px
+        display: block ruby;
+        &:hover
+            text-decoration: none
+            color: #fff
+            &::before
+                opacity: 0
+        &::before 
+            content: ""
+            position: absolute
+            height: 2px
+            width: 100%
+            bottom: 0
+            margin-bottom: -2px
+            background: #006495
+            opacity: 1
+            transition: 0.5s ease
+
+
+.recent-posts
+    background: #ffffff
+    display: flex
+    padding-bottom: 50px
+    .wrapper
+        .resent-post
+            position: relative
+            a
+                text-decoration: none
+            &__img
+                width: 100%
+            &__day
+                .day
+                    margin-left: 5px
+                    span
+                        ont-family: $font-roboto
+                        font-weight: 400
+                        font-style: italic
+                        font-size: 14px
+                        color: #434343 
+            &__name
+                a
+                    color: #434343
+                    font-family: "Rubik", sans-serif
+                    font-size: 18px
+                    line-height: 1.4
+                    font-weight: 600
+                    &:hover
+                        color: #006495
+                        text-decoration: none
+            &__desc
+            &__cat
+                position: absolute
+                top: 0
+                left: 15px
+                background: #006495
+                padding: 2px 8px
+                span
+                    font-family: $font-roboto
+                    font-size: 13px
+                    color: #ffffff
+
+
+
+
+
+
+.last-comments
+    //background-color: #c0c0c0
+    border: 1px solid #ececec
+    span
+        margin-left: 15px
+        font-size: 20px
+        font-family: "Rubik", sans-serif
+        font-weight: 300
+    .last-comment
+        margin-top: 10px
+        margin-bottom: 10px
+        padding-top: 10px
+        padding-bottom: 10px
+        border-bottom: 1px solid #ececec
+        display: flex
+        &:last-child
+            border-bottom: none
+        a
+            text-decoration: none
+        &__img
+            &--avatar
+                width: 50px
+                height: 50px
+                overflow: hidden
+                border-radius: 100px
+        &__text
+            margin-left: 10px
+            &--author
+                a
+                    text-decoration: none
+                    font-family: $font-roboto
+                    font-size: 14px
+                    font-weight: 500
+                    color: #006495
+            &--text
+                p
+                    line-height: 1.3
+                    font-family: $font-roboto
+                    font-size: 13px
+                    font-weight: 500
+                a
+                    p
+                        line-height: 1
+                        font-family: $font-roboto
+                        font-size: 13px
+                        font-weight: 500
+                        text-decoration: underline
+                        color: #006495
+                        &:hover
+                            text-decoration: none
+
+
+.footer-fluid
+    background-color: #1c1c1c
+    padding-top: 50px
+    .footer
+        .block-left
+            color: #ffffff
+        .bottom-menu
+            display: flex
+            align-items: center
+            ul
+                display: flex
+                justify-content: space-around
+                list-style-type: none
+                li
+                    padding-left: 10px
+                    padding-right: 10px
+                    a
+                        color: #ffffff
+                        font-size: 15px
+                        font-family: $font-roboto
+                        text-decoration: none
+                        &:hover
+                            color: #0593da
+
+        .social
+            margin-top: 50px
+            display: flex
+            justify-content: center
+            ul
+                list-style-type: none
+                display: flex
+                justify-content: space-between
+                li
+                    color: #ffffff
+                    margin: 0 5px
+                    //padding: 10px
+                    height: 50px
+                    width: 50px
+                    position: relative
+                    transition: 0.5s ease
+                    i
+                        font-size: 25px
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+
+                .icon-youtube
+                    background: #e0221b
+                    &:hover
+                        background: #db0600
+                .icon-vk
+                    background: #3a698f
+                    &:hover
+                        background: #134e78
+                .icon-facebook
+                    background: #2959a1
+                    &:hover
+                        background: #0f4488
+                .icon-twitter
+                    background: #31b0f3
+                    &:hover
+                        background: #008fd0
+                .icon-telegram
+                    background: #51ace0
+                    &:hover
+                        background: #2c96e4
+                .icon-instagram
+                    background: #ca3da5
+                    &:hover
+                        background: #a72585
+                .icon-steam
+                    background: #929292
+                    &:hover
+                        background: #494747
+                .icon-twitch
+                    background: #8f39ff
+                    &:hover
+                        background: #6525b5
+                        

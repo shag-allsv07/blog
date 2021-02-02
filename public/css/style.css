@@ -1,0 +1,1071 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.blog_container {
+  /*background-color: black; */
+  background: #171717 url(../images/bg.jpg) repeat top center;
+}
+
+.header {
+  background-color: #0e1417;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  margin-top: -60px;
+  z-index: 10;
+}
+
+.header .logo h1 {
+  font-size: 22px;
+  font-family: "Coda Caption", sans-serif;
+  color: #fff;
+}
+
+.header .main-nav {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header .main-nav .item {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.header .main-nav .item:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #0593da;
+}
+
+.header .auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .auth .link_auth {
+  color: #fff;
+  font-size: 17px;
+}
+
+.header .auth .link_auth span {
+  margin-left: 5px;
+}
+
+.header .auth .link_auth:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #c80700;
+}
+
+.span {
+  background: #1c1c1c;
+  margin-top: 60px;
+}
+
+.span span {
+  color: #b1b1b1;
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+  padding: 5px 20px;
+}
+
+.news-today {
+  background: #1c1c1c;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
+  height: 500px;
+}
+
+.news-today .article-today {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-today .article-today .cat {
+  padding: 5px 8px;
+  position: absolute;
+  background-color: #006495;
+  top: -100px;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.news-today .article-today .cat span {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}
+
+.news-today .article-today:nth-child(1) {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 6;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.news-today .article-today:nth-child(2) {
+  -ms-grid-column: 6;
+      grid-column-start: 6;
+  grid-column-end: 9;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.news-today .article-today:nth-child(3) {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.news-today .article-today:nth-child(4) {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 9;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.news-today .article-today:hover .article-today__text {
+  top: 60%;
+}
+
+.news-today .article-today:hover .cat {
+  opacity: 0.7;
+  top: 20px;
+}
+
+.news-today .article-today .article-today__text {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #000000;
+  opacity: 0.6;
+  z-index: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.news-today .article-today .article-today__text .article-today__name {
+  z-index: 10;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  z-index: 5;
+  text-align: center;
+  display: block;
+}
+
+.news-today .article-today .article-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.span_light {
+  padding-top: 30px;
+  background: #ffffff;
+}
+
+.span_light span {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+.game-news {
+  padding-bottom: 50px;
+  background: #ffffff;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.game-news .beee .game-new {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 0;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.game-news .beee .game-new:nth-child(5) {
+  border-bottom: none;
+}
+
+.game-news .beee .game-new__img {
+  width: 100%;
+}
+
+.game-news .beee .game-new__name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.game-news .beee .game-new__name a {
+  color: #434343;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.game-news .beee .game-new__name a:hover {
+  text-decoration: none;
+  color: #006495;
+}
+
+.game-news .beee .game-new__info {
+  padding-left: 20px;
+}
+
+.game-news .beee .game-new__info--date {
+  color: #434343;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.game-news .beee .game-new__info--comment {
+  margin-left: 10px;
+  color: #434343;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.game-news .beee .game-new__info--comment .fa-comment-o {
+  font-size: 14px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.game-news .beee .more-news {
+  text-transform: uppercase;
+  position: relative;
+  color: #434343;
+  top: 25px;
+}
+
+.game-news .beee .more-news:hover {
+  text-decoration: none;
+  color: #006495;
+}
+
+.game-news .beee .more-news:hover::before {
+  opacity: 0;
+}
+
+.game-news .beee .more-news::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -2px;
+  background: #006495;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.game-news .popular {
+  background: #1c262c;
+}
+
+.game-news .popular span {
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.game-news .popular-new {
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.game-news .popular-new__img {
+  width: 100%;
+}
+
+.game-news .popular-new__desc--name a {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.game-news .popular-new__desc--name a p {
+  line-height: 1.3;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.game-news .popular-new__desc--name a:hover {
+  text-decoration: underline;
+}
+
+.blogs-on-games {
+  padding-bottom: 100px;
+  background: #ffffff;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.blogs-on-games__game .blog {
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.blogs-on-games__game .blog a {
+  text-decoration: none;
+}
+
+.blogs-on-games__game .blog a:hover {
+  text-decoration: none;
+}
+
+.blogs-on-games__game .blog__img {
+  width: 100%;
+}
+
+.blogs-on-games__game .blog .eyes {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  background: #006495;
+  padding: 2px 8px;
+}
+
+.blogs-on-games__game .blog .eyes span {
+  font-size: 13px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.blogs-on-games__game .blog .eyes span .fa-eye {
+  font-size: 13px;
+  color: #ffffff;
+  margin-right: 2px;
+}
+
+.blogs-on-games__game .blog-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
+.blogs-on-games__game .blog-author .author {
+  margin-left: 5px;
+}
+
+.blogs-on-games__game .blog-author .author span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  color: #434343;
+}
+
+.blogs-on-games__game .blog-author .author a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 5px;
+  color: #006495;
+}
+
+.blogs-on-games__game .blog-author .author a:hover {
+  text-decoration: underline;
+}
+
+.blogs-on-games__game .blog-author .comment {
+  margin-right: 5px;
+}
+
+.blogs-on-games__game .blog-author .comment span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 13px;
+  color: #434343;
+}
+
+.blogs-on-games__game .blog-author .comment span .fa-comment-o {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.blogs-on-games__game .blog-desc {
+  padding-top: 10px;
+}
+
+.blogs-on-games__game .blog-desc a {
+  color: #434343;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.blogs-on-games__game .blog-desc a:hover {
+  color: #006495;
+  text-decoration: none;
+}
+
+.blogs-on-games .more-blogs {
+  text-transform: uppercase;
+  position: relative;
+  color: #434343;
+  top: 25px;
+  left: 15px;
+}
+
+.blogs-on-games .more-blogs:hover {
+  text-decoration: none;
+  color: #006495;
+}
+
+.blogs-on-games .more-blogs:hover::before {
+  opacity: 0;
+}
+
+.blogs-on-games .more-blogs::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -2px;
+  background: #006495;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.games-articles {
+  padding-bottom: 100px;
+  background: #ffffff;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.games-articles__game .article {
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.games-articles__game .article a {
+  text-decoration: none;
+}
+
+.games-articles__game .article__img {
+  width: 100%;
+}
+
+.games-articles__game .article-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
+.games-articles__game .article-day .day {
+  margin-left: 5px;
+}
+
+.games-articles__game .article-day .day span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  color: #434343;
+}
+
+.games-articles__game .article-desc {
+  padding-top: 10px;
+}
+
+.games-articles__game .article-desc a {
+  color: #434343;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.games-articles__game .article-desc a:hover {
+  color: #006495;
+  text-decoration: none;
+}
+
+.games-articles .more-blogs {
+  text-transform: uppercase;
+  position: relative;
+  color: #434343;
+  top: 25px;
+  left: 15px;
+}
+
+.games-articles .more-blogs:hover {
+  text-decoration: none;
+  color: #006495;
+}
+
+.games-articles .more-blogs:hover::before {
+  opacity: 0;
+}
+
+.games-articles .more-blogs::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -2px;
+  background: #006495;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.span_dark {
+  padding-top: 30px;
+  background: #1c1c1c;
+}
+
+.span_dark span {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.gallery {
+  background: #1c1c1c;
+  padding-bottom: 100px;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.gallery-item {
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-item:hover {
+  cursor: pointer;
+}
+
+.gallery-item:hover .eye {
+  opacity: 0.7;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.gallery-item:hover .eye .fa-eye {
+  opacity: 1;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 0.5;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery-item .eye {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: #fff;
+  z-index: 8;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.gallery-item .eye .fa-eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #006495;
+  font-size: 20px;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #006495;
+  opacity: 0;
+  z-index: 5;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.gallery-item:nth-child(1) {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery-item:nth-child(2) {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 7;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.gallery-item:nth-child(3) {
+  -ms-grid-column: 7;
+      grid-column-start: 7;
+  grid-column-end: 9;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.gallery-item:nth-child(4) {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 7;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.gallery-item:nth-child(5) {
+  -ms-grid-column: 7;
+      grid-column-start: 7;
+  grid-column-end: 9;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.gallery-item:nth-child(6) {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.gallery-item:nth-child(7) {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.gallery-item:nth-child(8) {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 7;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.gallery-item:nth-child(9) {
+  -ms-grid-column: 7;
+      grid-column-start: 7;
+  grid-column-end: 9;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.gallery .more-gallery-item {
+  text-transform: uppercase;
+  position: relative;
+  color: #fff;
+  top: 25px;
+  left: 15px;
+  display: block ruby;
+}
+
+.gallery .more-gallery-item:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.gallery .more-gallery-item:hover::before {
+  opacity: 0;
+}
+
+.gallery .more-gallery-item::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -2px;
+  background: #006495;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.recent-posts {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.recent-posts .wrapper .resent-post {
+  position: relative;
+}
+
+.recent-posts .wrapper .resent-post a {
+  text-decoration: none;
+}
+
+.recent-posts .wrapper .resent-post__img {
+  width: 100%;
+}
+
+.recent-posts .wrapper .resent-post__day .day {
+  margin-left: 5px;
+}
+
+.recent-posts .wrapper .resent-post__day .day span {
+  ont-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  color: #434343;
+}
+
+.recent-posts .wrapper .resent-post__name a {
+  color: #434343;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.recent-posts .wrapper .resent-post__name a:hover {
+  color: #006495;
+  text-decoration: none;
+}
+
+.recent-posts .wrapper .resent-post__cat {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  background: #006495;
+  padding: 2px 8px;
+}
+
+.recent-posts .wrapper .resent-post__cat span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.last-comments {
+  border: 1px solid #ececec;
+}
+
+.last-comments span {
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+.last-comments .last-comment {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.last-comments .last-comment:last-child {
+  border-bottom: none;
+}
+
+.last-comments .last-comment a {
+  text-decoration: none;
+}
+
+.last-comments .last-comment__img--avatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.last-comments .last-comment__text {
+  margin-left: 10px;
+}
+
+.last-comments .last-comment__text--author a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #006495;
+}
+
+.last-comments .last-comment__text--text p {
+  line-height: 1.3;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.last-comments .last-comment__text--text a p {
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #006495;
+}
+
+.last-comments .last-comment__text--text a p:hover {
+  text-decoration: none;
+}
+
+.footer-fluid {
+  background-color: #1c1c1c;
+  padding-top: 50px;
+}
+
+.footer-fluid .footer .block-left {
+  color: #ffffff;
+}
+
+.footer-fluid .footer .bottom-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-fluid .footer .bottom-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+.footer-fluid .footer .bottom-menu ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.footer-fluid .footer .bottom-menu ul li a {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.footer-fluid .footer .bottom-menu ul li a:hover {
+  color: #0593da;
+}
+
+.footer-fluid .footer .social {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-fluid .footer .social ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-fluid .footer .social ul li {
+  color: #ffffff;
+  margin: 0 5px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.footer-fluid .footer .social ul li i {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.footer-fluid .footer .social ul .icon-youtube {
+  background: #e0221b;
+}
+
+.footer-fluid .footer .social ul .icon-youtube:hover {
+  background: #db0600;
+}
+
+.footer-fluid .footer .social ul .icon-vk {
+  background: #3a698f;
+}
+
+.footer-fluid .footer .social ul .icon-vk:hover {
+  background: #134e78;
+}
+
+.footer-fluid .footer .social ul .icon-facebook {
+  background: #2959a1;
+}
+
+.footer-fluid .footer .social ul .icon-facebook:hover {
+  background: #0f4488;
+}
+
+.footer-fluid .footer .social ul .icon-twitter {
+  background: #31b0f3;
+}
+
+.footer-fluid .footer .social ul .icon-twitter:hover {
+  background: #008fd0;
+}
+
+.footer-fluid .footer .social ul .icon-telegram {
+  background: #51ace0;
+}
+
+.footer-fluid .footer .social ul .icon-telegram:hover {
+  background: #2c96e4;
+}
+
+.footer-fluid .footer .social ul .icon-instagram {
+  background: #ca3da5;
+}
+
+.footer-fluid .footer .social ul .icon-instagram:hover {
+  background: #a72585;
+}
+
+.footer-fluid .footer .social ul .icon-steam {
+  background: #929292;
+}
+
+.footer-fluid .footer .social ul .icon-steam:hover {
+  background: #494747;
+}
+
+.footer-fluid .footer .social ul .icon-twitch {
+  background: #8f39ff;
+}
+
+.footer-fluid .footer .social ul .icon-twitch:hover {
+  background: #6525b5;
+}
+/*# sourceMappingURL=style.css.map */
