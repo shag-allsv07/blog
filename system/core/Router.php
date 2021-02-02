@@ -29,21 +29,21 @@ class Router
     public static function checkRoute($url)
     {
         foreach (self::$routers as $key => $val){
-            if (preg_match("#$key#i", $url, $matches)) {
+            if (preg_match("#$key#i", $url, $matches)) { // если есть совпадение с регулярным выражением, то записываем в $rout = текущее значение таблицы маршрутов routers, а так-же записываем текущий маршрут в массив matches
                 $rout = $val;
 
-                foreach ($matches as $k => $match){
+                foreach ($matches as $k => $match){ // записываем в массив rout только строковые ключи массива matches
                     if(is_string($k)){
                        $rout[$k] = $match;
                    }
                }
 
-               $rout['controller'] = self::upperStr($rout['controller']);
+               $rout['controller'] = self::upperStr($rout['controller']); // привели в правильное название класс
 
-               if(!isset($route['action'])){
+               if(!isset($rout['action'])){ // если в адресной строке пришел только контроллер (http://blog/news), то дописываем в rout метод index
                    $rout['action'] = 'index';
                }
-                self::$route = $rout;
+                self::$route = $rout; // записываем в свойство текущий маршрут
 
                return true;
             }
@@ -63,7 +63,15 @@ class Router
             $controller = 'app\controllers\\' . self::$route['controller'] . "Controller";
 
             if (class_exists($controller)){
-                $obj = new $controller;
+                $obj = new $controller; // создаем обьект класса
+                $action = self::lowerStr(self::$route['action']); // привели в правильное название метод
+
+                if (method_exists($obj, $action)){
+                    $obj->$action(); // вызываем метод класса
+                }
+                else {
+                    echo "Метод $action не найден";
+                }
             }
             else {
                 echo "Контроллер $controller не найден";
@@ -83,8 +91,8 @@ class Router
         return $str;
     }
 
-    private static function lowerStr()
+    private static function lowerStr($str)
     {
-
+        return lcfirst(self::upperStr($str));
     }
 }

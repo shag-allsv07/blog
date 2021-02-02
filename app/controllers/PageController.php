@@ -10,4 +10,14 @@ class PageController
     {
         echo 'PageController';
     }
+
+    public function index()
+    {
+        echo 'PageController::index';
+    }
+
+    public function test()
+    {
+        echo 'PageController::test';
+    }
 }

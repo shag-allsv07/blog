@@ -10,4 +10,14 @@ class MainController
     {
         echo 'MainController';
     }
+
+    public function index()
+    {
+        echo 'MainController::index';
+    }
+
+    public function test()
+    {
+        echo 'MainController::test';
+    }
 }
