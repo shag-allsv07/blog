@@ -68,9 +68,10 @@ class Router
             if (class_exists($controller)){
                 $obj = new $controller(self::$route); // создаем обьект класса
                 $action = self::lowerStr(self::$route['action']) . 'Action'; // привели в правильное название метод
-                //pr(self::$route);
+
                 if (method_exists($obj, $action)){
                     $obj->$action(); // вызываем метод класса
+                    $obj->getView(); // вызываем метод getView класса Controller
                 }
                 else {
                     echo "Метод $action не найден";

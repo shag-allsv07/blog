@@ -7,6 +7,7 @@ require '../system/core/functions.php';
  * системные константы
  */
 define("ROOT", dirname(__DIR__));
+define("LAYOUT", "default");
 
 
 /**
@@ -33,10 +34,6 @@ Router::add(['^$' => ['controller' => 'Main', 'action' => 'index']]);
 Router::add(['^(?P<controller>[a-z0-9-]+)/?(?P<action>[a-z0-9-]+)?$' => []]);
 
 
-
-
-//pr(Router::$routers);
-
 Router::dispatch($urlStr);
 
-//pr(Router::$route);
+\system\core\DB::instance();

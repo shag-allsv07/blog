@@ -7,15 +7,17 @@ use system\core\Controller;
 
 class MainController extends Controller
 {
+    public $layout = 'main';
 
     public function indexAction()
     {
-        pr($this->route);
+        //$this->view = 'test';
+        $this->setVars(['name' => 'vasya']);
     }
 
     public function testAction()
     {
-        pr($this->route);
+        //pr($this->route);
     }
 
 

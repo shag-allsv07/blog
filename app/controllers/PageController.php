@@ -3,17 +3,18 @@
 
 namespace app\controllers;
 
+use system\core\Controller;
 
-class PageController
+class PageController extends Controller
 {
 
     public function indexAction()
     {
-        echo 'PageController::index';
+        $this->view = 'test';
     }
 
     public function testAction()
     {
-        echo 'PageController::test';
+        //echo 'PageController::test';
     }
 }
